@@ -23,7 +23,7 @@ GIT
 PATH
   remote: .
   specs:
-    vagrant-poderosa (0.1.0)
+    vagrant-poderosa (0.2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -107,4 +107,4 @@ DEPENDENCIES
   vagrant-poderosa!
 
 BUNDLED WITH
-   1.10.5
+   1.10.6

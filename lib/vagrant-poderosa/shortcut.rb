@@ -28,14 +28,14 @@ module VagrantPoderosa
                        'encoding' => 'UTF8', 'caption' => ssh_info[:host])
       root.add_element('Poderosa.Protocols.SSHLoginParameter',
                        ssh_login_parameters)
-      #        filename = Pathname(Dir.tmpdir) + (vm.name.to_s + '.gts')
-      #      file = File.open(filename, 'wb')
-      Tempfile.open(vm.name.to_s + '.gts') do |file|
+
+      filename = Pathname(Dir.tmpdir) + ('vagrant-' + vm.name.to_s + '.gts')
+
+      File.open(filename, 'wb') do |file|
         doc.write file
         file.close
-        #      filename
-        file.path
       end
+      filename
     end
 
     def self.absolute_winpath(path, root_path)
